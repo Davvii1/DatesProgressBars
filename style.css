@@ -1,0 +1,81 @@
+:root {
+  --progressVD;
+  --progressVW;
+  --progressVM;
+}
+
+body {
+  background: #191919;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.bar {
+  display: flex;
+}
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.progress-valued {
+  animation: load 1s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+.progress-valuew {
+  animation: loadw 1s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+.progress-valuem {
+  animation: loadm 1s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+p {
+  font-family: 'Encode Sans', sans-serif;
+  text-align: center;
+  color: white;
+  display: flex-end;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: var(--progressVD); }
+}
+
+@keyframes loadw {
+  0% { width: 0; }
+  100% { width: var(--progressVW); }
+}
+
+@keyframes loadm {
+  0% { width: 0; }
+  100% { width: var(--progressVM); }
+}
