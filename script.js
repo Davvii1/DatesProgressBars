@@ -6,7 +6,7 @@ function progress(){
   
   const now = new Date();
 
-  // Day
+  // Dia
   const dayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const dayEnd = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
   const dayProgress = calcProgress(dayStart, dayEnd, now);
@@ -15,7 +15,7 @@ function progress(){
   document.getElementById("day").innerHTML = 'Day: '+dayP+'%';
   document.documentElement.style.setProperty('--progressVD', dayProgress*100+'%');
   
-  // Week
+  // Semana
   let weekDay = now.getDay() === 0 ? 6 : now.getDay() - 1;
   const weekStart = new Date(now.getFullYear(), now.getMonth(), now.getDate() - weekDay);
   const weekEnd = new Date(weekStart.getFullYear(), weekStart.getMonth(), weekStart.getDate() + 7);
@@ -25,7 +25,7 @@ function progress(){
   document.getElementById("week").innerHTML = 'Week: '+weekP+'%';
   document.documentElement.style.setProperty('--progressVW', weekProgress*100+'%');
   
-  // Month
+  // Mes
   const monthStart = new Date(now.getFullYear(), now.getMonth(), 1);
   const monthEnd = new Date(now.getFullYear(), now.getMonth() + 1, 1);
   const monthProgress = calcProgress(monthStart, monthEnd, now);
